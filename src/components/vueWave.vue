@@ -38,8 +38,8 @@ export default {
   computed: {
     mainStyle() {
       return {
-        height: this.height,
-        width: this.width,
+        // height: this.height,
+        // width: this.width,
         'border-radius': this['border-radius'],
       }
     },

@@ -3,7 +3,7 @@
 > vue水波纹特效
 
 可以用在大部分块级元素上，实现波纹特效
-[预览地址](https://stmory.github.io/vue_wave "Markdown")
+[预览地址](https://stmory.github.io/vue_wave/index.html "Markdown")
 
 ## Build Setup
 

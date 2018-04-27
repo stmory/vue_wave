@@ -1,6 +1,6 @@
 <!--  -->
 <template>
-  <wave class="box" color="#fff">
+  <wave class="box" color="#000">
     <div class="item" slot="content">
       111
     </div>
@@ -31,7 +31,10 @@ export default {
 }
 .item{
   background-color: rgb(91, 137, 223);
-  width: 1000px;
+  border-radius: 50%;
+  line-height: 100PX;
+  text-align: center;
+  width: 100px;
   height: 100px;
 }
 </style>

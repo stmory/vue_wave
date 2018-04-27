@@ -18,6 +18,7 @@ export default {
     return {
       height: '',
       width: '',
+      'border-radius': '',
       waveStyle: {
         height: '',
         width: '',
@@ -39,13 +40,15 @@ export default {
       return {
         height: this.height,
         width: this.width,
+        'border-radius': this['border-radius'],
       }
     },
   },
   methods: {
     setWidthAndHeight() {
-      this.height = this.$slots.content[0].elm.offsetHeight + 'px'
-      this.width = this.$slots.content[0].elm.offsetWidth + 'px'
+      this.height = window.getComputedStyle(this.$slots.content[0].elm,null).height
+      this.width = window.getComputedStyle(this.$slots.content[0].elm,null).width
+      this['border-radius'] = window.getComputedStyle(this.$slots.content[0].elm,null)['border-radius']
     },
     startWave(event) {
       let box = this.getElBox(this.$refs.vueWave_slot)
@@ -90,6 +93,7 @@ export default {
 <style scoped>
 .vueWave_main{
   position: relative;
+  overflow: hidden;
 }
 .vueWave_slot{
   width: 100%;
